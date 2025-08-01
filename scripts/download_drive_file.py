@@ -8,6 +8,7 @@ from googleapiclient.http import MediaIoBaseDownload
 SERVICE_ACCOUNT_INFO = os.environ.get('GDRIVE_SERVICE_ACCOUNT')
 
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+FOLDER_TO_DOWNLOAD = ('1gTo-lWF8KePNcNbhXSlaP6B6OusKnTeJ', 'data') 
 
 # FILE_ID1 = '18EesyISDITHMX-VLI4mjvDF4nOQ7fDsz'
 # FILE_ID2 = '1wY7X3QV_0O1uS3D7s0qmanF8O2aNA331'
@@ -36,6 +37,33 @@ def download_file(service, file_id, output_file):
         status, done = downloader.next_chunk()
         print(f"Downloading {output_file}: {int(status.progress() * 100)}%")
 
+def download_folder_content(service, folder_id, output_folder_path):
+    """Recursively downloads all files from a Google Drive folder."""
+    if not os.path.exists(output_folder_path):
+        os.makedirs(output_folder_path)
+        print(f"Created directory: {output_folder_path}")
+
+    query = f"'{folder_id}' in parents and trashed=false"
+    results = service.files().list(q=query, fields="files(id, name, mimeType)").execute()
+    items = results.get('files', [])
+
+    if not items:
+        print(f"No files found in folder {folder_id}.")
+        return
+
+    for item in items:
+        file_name = item['name']
+        file_id = item['id']
+        mime_type = item['mimeType']
+        
+        item_path = os.path.join(output_folder_path, file_name)
+
+        if mime_type == 'application/vnd.google-apps.folder':
+            print(f"Found subfolder: {file_name}. Entering...")
+            download_folder_content(service, file_id, item_path)
+        else:
+            download_file(service, file_id, item_path)
+            
 def main():
     service_account_info = json.loads(SERVICE_ACCOUNT_INFO)
     creds = service_account.Credentials.from_service_account_info(service_account_info, scopes=SCOPES)
@@ -44,6 +72,11 @@ def main():
     for file_id, output_file in FILES_TO_DOWNLOAD:
         download_file(service, file_id, output_file)
         print(f"File {output_file} successfully downloaded.")
+    
+    folder_id, output_folder_name = FOLDER_TO_DOWNLOAD
+    download_folder_content(service, folder_id, output_folder_name)
+    print(f"Folder '{output_folder_name}' and its contents successfully downloaded.")
+
 
 if __name__ == '__main__':
     main()
