@@ -26,7 +26,7 @@ jobs:
     - name: Run download script
       run: python scripts/download_drive_file.py
       env:
-        SERVICE_ACCOUNT_INFO: ${{ secrets.GDRIVE_SERVICE_ACCOUNT }}
+        GDRIVE_SERVICE_ACCOUNT: ${{ secrets.GDRIVE_SERVICE_ACCOUNT }}
 
     - name: Commit and push changes
       run: |
