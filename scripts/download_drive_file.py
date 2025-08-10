@@ -16,13 +16,13 @@ FOLDER_TO_DOWNLOAD = ('1gTo-lWF8KePNcNbhXSlaP6B6OusKnTeJ', 'data')
 # FILE_ID4 = '1iuDYJ7wqm4Bh8iIPvPKylCBnsc0aLPN6'
 
 # OUTPUT_FILE1 = 'experiment_FBProphet.ipynb'
-# OUTPUT_FILE2 = 'experiment_ARIMA.ipynb'
+# OUTPUT_FILE2 = 'experiment_CatBoost.ipynb'
 # OUTPUT_FILE2 = 'experiment_LSTM.ipynb'
 # OUTPUT_FILE2 = 'descriptive_stats_experiment_data.ipynb'
 
 FILES_TO_DOWNLOAD = [
     ('18EesyISDITHMX-VLI4mjvDF4nOQ7fDsz', 'experiment_FBProphet.ipynb'),
-    ('1wY7X3QV_0O1uS3D7s0qmanF8O2aNA331', 'experiment_ARIMA.ipynb'),
+    ('1wY7X3QV_0O1uS3D7s0qmanF8O2aNA331', 'experiment_CatBoost.ipynb'),
     ('1nLmPj6MKZecHK7ywYXKiWKtg4dr1jtUu', 'experiment_LSTM.ipynb'),
     ('1iuDYJ7wqm4Bh8iIPvPKylCBnsc0aLPN6', 'descriptive_stats_experiment_data.ipynb')
 ]
