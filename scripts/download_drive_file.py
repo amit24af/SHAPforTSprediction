@@ -21,7 +21,7 @@ FOLDER_TO_DOWNLOAD = ('1gTo-lWF8KePNcNbhXSlaP6B6OusKnTeJ', 'data')
 
 FILES_TO_DOWNLOAD = [
     ('18EesyISDITHMX-VLI4mjvDF4nOQ7fDsz', 'experiment_FBProphet.ipynb'),
-    ('1wY7X3QV_0O1uS3D7s0qmanF8O2aNA331', 'experiment_CatBoost.ipynb'),
+    ('1wY7X3QV_0O1uS3D7s0qmanF8O2aNA331', 'experiment_XGBoost.ipynb'),
     ('1nLmPj6MKZecHK7ywYXKiWKtg4dr1jtUu', 'experiment_LSTM.ipynb'),
     ('1iuDYJ7wqm4Bh8iIPvPKylCBnsc0aLPN6', 'descriptive_stats_experiment_data.ipynb'),
     ('1l_3laT28NO6ZDOtXGpXuWkta0QPQjU5u', 'experiment_FBProphet_removed_widgets_prob.ipynb')
