@@ -10,15 +10,6 @@ SERVICE_ACCOUNT_INFO = os.environ.get('GDRIVE_SERVICE_ACCOUNT')
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 FOLDER_TO_DOWNLOAD = ('1gTo-lWF8KePNcNbhXSlaP6B6OusKnTeJ', 'data') 
 
-# FILE_ID1 = '18EesyISDITHMX-VLI4mjvDF4nOQ7fDsz'
-# FILE_ID2 = '1wY7X3QV_0O1uS3D7s0qmanF8O2aNA331'
-# FILE_ID3 = '1nLmPj6MKZecHK7ywYXKiWKtg4dr1jtUu'
-# FILE_ID4 = '1iuDYJ7wqm4Bh8iIPvPKylCBnsc0aLPN6'
-# OUTPUT_FILE1 = 'experiment_FBProphet.ipynb'
-# OUTPUT_FILE2 = 'experiment_CatBoost.ipynb'
-# OUTPUT_FILE2 = 'experiment_LSTM.ipynb'
-# OUTPUT_FILE2 = 'descriptive_stats_experiment_data.ipynb'
-
 FILES_TO_DOWNLOAD = [
     ('1l_3laT28NO6ZDOtXGpXuWkta0QPQjU5u', 'experiment_FBProphet.ipynb'),
     ('1wY7X3QV_0O1uS3D7s0qmanF8O2aNA331', 'experiment_XGBoost.ipynb'),
