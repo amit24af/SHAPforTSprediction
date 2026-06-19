@@ -33,7 +33,7 @@ Both models were tested across **three forecasting horizons**: 30-day, 60-day, a
  
 **Result:** Facebook Prophet consistently outperformed LSTM across all three horizons.
  
-## Model Interpretation — SHAP
+## Model Explanation — SHAP
  
 To explain the predictions of the best-performing model (FB Prophet), **Kernel SHAP** was applied. Kernel SHAP was chosen specifically because it is **model-agnostic**, as time series models such as FB Prophet are not natively compatible with model-specific SHAP explainers (e.g., TreeExplainer). 
  
