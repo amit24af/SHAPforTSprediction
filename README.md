@@ -44,4 +44,5 @@ To explain the predictions of the best-performing model (FB Prophet), **Kernel S
   
 ## Pipeline Overview
 
-<img width="2800" height="625" alt="xxx - Flow diplomski 2" src="https://github.com/user-attachments/assets/daca75fd-9b53-4571-83c7-86b7869d3af7" />
+<img width="2680" height="720" alt="xxx - Flow diplomski 2" src="https://github.com/user-attachments/assets/f5819d82-7358-45b5-9811-2bb36a580f38" />
+
